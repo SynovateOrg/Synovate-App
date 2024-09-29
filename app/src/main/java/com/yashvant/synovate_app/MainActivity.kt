@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     content = {
                         NavHost(navController = navController, startDestination = "home"){
                             composable("home"){
-                                HomeScreen()
+                                HomeScreen(navController)
                             }
 
                         }
