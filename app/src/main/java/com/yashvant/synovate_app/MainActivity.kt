@@ -12,6 +12,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.yashvant.synovate_app.ui.screens.HomeScreen
 import com.yashvant.synovate_app.ui.theme.SynovateAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,9 +25,19 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SynovateAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPaddin ->
+                val navController = rememberNavController()
 
-                }
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    content = {
+                        NavHost(navController = navController, startDestination = "home"){
+                            composable("home"){
+                                HomeScreen()
+                            }
+
+                        }
+                    }
+                )
             }
         }
     }
