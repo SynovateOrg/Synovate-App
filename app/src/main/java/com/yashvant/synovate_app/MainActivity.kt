@@ -17,6 +17,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.yashvant.synovate_app.ui.screens.HomeScreen
+import com.yashvant.synovate_app.ui.screens.TasksScreen
 import com.yashvant.synovate_app.ui.theme.SynovateAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
                             }
 
                             composable("tasks") {
-                                TaskScreen(navController)
+                                TasksScreen(navController)
                             }
 
                         }
