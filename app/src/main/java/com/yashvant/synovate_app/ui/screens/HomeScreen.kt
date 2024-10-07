@@ -12,7 +12,7 @@ fun HomeScreen(navController: NavController) {
     LazyColumn {
         item {
             Column {
-                Text("Hello, World!")
+                Text("Welcome to Synovate")
             }
         }
     }
